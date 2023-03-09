@@ -173,8 +173,9 @@ tr:hover {
 
   /* Pienennetään taulukon fyysistä kokoa*/
   .taulukko {
-    padding: 2%;
-    font-size: 14px;
+    padding: 0%;
+    font-size: 13px;
+    overflow-wrap: break-word;
   }
 
   /*"Otetaan" hover pois*/

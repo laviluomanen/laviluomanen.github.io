@@ -1,0 +1,193 @@
+/* Yläosan navigaatiopalkki */
+.navigointipalkki {
+  display: flex;
+  background-color: #3D5656;
+  border-bottom: 1px solid #FED049;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navigointipalkki a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.navigointipalkki a {
+  padding: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.navigointipalkki a:hover {
+  background-color: #FED049;
+  color: black;
+}
+
+/* Flexbox-asettelu
+   Taustakuva
+   Otsikko
+*/
+body {
+  margin: 0px;
+  background-image: url('../media/lappajarvi.jpg');
+  background-image: no-repeat;
+  background-position: center center;
+}
+
+.main {
+  margin: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.main h1 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  background-color: #68B984;
+  font-size: 30px;
+}
+
+/* Taulukon yläpuolinen info-osio */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #68B984;
+  padding: 20px;
+  text-align: justify;
+}
+
+.info a {
+  text-decoration: underline;
+  color: black;
+}
+
+.info a:hover {
+  color: #FED049
+}
+
+.info p {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Varsinainen taulukkuosio */
+
+table {
+  border-collapse: collapse;
+  border: none;
+}
+
+.taulukko {
+  padding: 20px;
+  border: none;
+  background-color: #68B984;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.taulukko th, td {
+  height: 80px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #3D5656;
+}
+
+/*
+Kolumnien otsikot isoille kirjaimille 
+*/
+.taulukko th {
+  text-transform: uppercase;
+}
+
+/*
+korostetaan käyttäjälle yksittäistä riviä
+kun hiiri liikkuu päällä.
+*/
+tr:hover {
+  background-color: #3D5656;
+}
+
+/* Sivun alaosan pohjapalkki */
+.footer {
+  background-color: #FED049;
+  padding-top: 25px;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Responsiiviset osat
+   Navigointipalkin linkit päällekkäin
+*/
+@media screen and (max-width: 800px) {
+  .navigointipalkki{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Pienennetään otsikkoa */
+  .main h1 {
+    font-size: 18px;
+  }
+
+  /* Poistetaan puskurit sivulta
+     koska poistamme taustakuvankin
+  */ 
+  .main {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  /* 
+  Otetaan taustakuva pois
+  */
+  body{
+    background-image: none;
+    background-color: #68B984;
+  }
+
+  /* Otetaan navigointipalkista hover
+  "pois" kun siirretään mahd. mobiililaitteelle. Tähän nyt
+  varmaan joku nätimpikin tapa olisi.*/
+  .navigointipalkki a:hover {
+    background-color: #3D5656;
+    color: white;
+  }
+
+  /* Otetaan taulukosta hover
+    "pois" kun siirretään mahd. mobiililaitteelle*/
+  tr:hover{
+    background-color: #68B984;
+  }
+
+  /* Hoverin ollessa pois muutetaan väriä painallettaessa
+  linkkiä, jotta käyttäjä saa indikaation onnistuneesta
+  opereaatiosta. */
+  .navigointipalkki a:active{
+    background-color: #FED049;
+    color: black;
+  }
+
+  /* Pienennetään taulukon fyysistä kokoa*/
+  .taulukko {
+    padding: 2%;
+    font-size: 14px;
+  }
+
+  /*"Otetaan" hover pois*/
+  .info a:hover {
+    color: black;
+  }
+
+
+  /* Hoverin ollessa pois muutetaan väriä painallettaessa
+  linkkiä, jotta käyttäjä saa indikaation onnistuneesta
+  opereaatiosta. */
+  .info a:active {
+    color: #FED049;
+  }
+
+}

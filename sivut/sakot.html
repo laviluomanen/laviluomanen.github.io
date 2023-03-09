@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../tyylit/sakot.css">
+    <title>"Korvausarvolaskuri"</title>
+</head>
+<body onload="alusta();">
+
+    <!--
+        Alustusta varten luotu ulkoinen js-tiedosto, jossa asetetaan
+        tarvittava data session storageen.
+    -->
+    <script type="text/javascript" src="../scripts/alusta.js"></script>
+    <!-- 
+        Palkki ja linkit
+    -->
+    <div class="navigointipalkki">
+        <a href="../index.html">Etusivu</a>
+        <a href="../sivut/rajoitukset.html">Kalastusrajoitukset</a>
+        <a href="../sivut/sakot.html">"Korvausarvolaskuri"</a>
+    </div>
+
+    <div class="sakkoinfo">
+        <div class="pudotettuheader">
+            <h1>Uhanalaisten ja taantuneiden kalojen "korvausarvolaskuri"</h1>
+            <p>kuva: Jussi Nukari</p>
+        </div>
+        <div class="laskin">
+            <div class="info">
+                <p>Oletetaan, että siimasi päässä, katiskassasi, verkossasi tai atraimessasi on suojeluarvoltaan kallein
+                mahdollinen kalalajin yksilö. Nostat kalan veneeseen, papitat ja verestät sen.</p>
+                <p>Jäät kiinni ja joudut korvaamaan alamittaisen tai rauhoitusajan piirissä olevan yksilön suojeluarvon.</p>
+                <p>Kun painaat nappia huomaat mitä muuta olisit voinut saada suojeluarvosummalla rahamäärällä.</p>
+            </div>
+
+            <div class="napit">
+                <button class="gen_button" type="button" name="Taimen" id="taimen" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Taimen</button>
+                <button class="gen_button" type="button" name="Lohi" id="lohi" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Lohi</button>
+                <button class="gen_button" type="button" name="Nieriä" id="nieria" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Nieriä</button>
+                <button class="gen_button" type="button" name="Harjus" id="harjus" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Harjus</button>
+                <button class="gen_button" type="button" name="Nahkiainen" id="nahkiainen"  onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Nahkiainen</button>
+                <button class="gen_button" type="button" name="Siika" id="siika" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Siika</button>
+                <button class="gen_button" type="button" name="Ankerias" id="ankerias" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Ankerias</button>
+                <button class="gen_button" type="button" name="Jokirapu" id="jokirapu" onclick="kerroOstokohde(this.id); document.getElementById('ostokohde').
+                scrollIntoView({behavior: 'smooth'});">Jokirapu</button>
+            </div>
+            
+            <div class="ostokohde" id="ostokohde"></div>
+            
+        </div>
+    </div>
+    <!--
+        Kahden ulkoisen js-tiedoston kutsu
+    -->
+    <script type="text/javascript" src="../scripts/ostokohde.js"></script>
+    <script type="text/javascript" src="../scripts/arvoindeksi.js"></script>
+
+    <div class="footer">
+        <p>Tämä sivusto on Web-ohjelmoinnin perusteet -kurssin harjoitustyö.</p>
+        <p>lasse.luomanen(at)seamk.fi</p>
+        <!--
+            SeAMK-logo ladattu opiskelijoille tarkoitetusta kuvapankista SeAMK:n intranetistä
+        -->
+        <img src="../media/SeAMK_logo_valkoinen_fi_en.png" alt="SeAMK logo" width="133" height="45">
+    </div>
+</body>
+</html>

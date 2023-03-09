@@ -1,0 +1,229 @@
+/* Yläosan navigaatiopalkki */
+.navigointipalkki {
+    display: flex;
+    background-color: #3D5656;
+    border-bottom: 1px solid #FED049;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .navigointipalkki a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navigointipalkki a {
+    padding: 18px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navigointipalkki a:hover {
+    background-color: #FED049;
+    color: black;
+  }
+
+body {
+    margin: 0px;
+    background-color: #68B984;
+}
+
+.pudotettuheader {
+    flex: 100%;
+    margin: auto;
+    background-image: url('../media/teno.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pudotettuheader p {
+    text-align: right;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
+}
+
+.pudotettuheader h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10%;
+    text-transform: uppercase;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+.sakkoinfo {
+    margin: auto;
+    background-color: #CFFDE1;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info p {
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align: justify;
+}
+
+.laskin {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    justify-content: space-between;
+}
+
+.laskin p {
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 28px;
+    flex: 100%;
+}
+
+.ostokohde {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding-top: 1%;
+    background-color: #CFFDE1;
+    height: 500px;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    flex: 100%;
+}
+
+.suojeluarvotiedot {
+    padding: 1%;
+}
+
+.napit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+.gen_button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 48px;
+    border: none;
+    background-color: #FED049;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    box-shadow: 10px 10px 8px #3D5656, -10px -10px 8px #68B984;
+}
+
+.gen_button:hover {
+    background-color: #68B984;
+    box-shadow: 10px 10px 8px #3D5656, -10px -10px 8px #FED049;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* Sivun alaosan pohjapalkki */
+.footer {
+    background-color: #FED049;
+    padding-top: 25px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  /* Responsiivisuus */
+
+/* 
+    Navbarin linkit allekkain, keskitettynä
+*/
+@media screen and (max-width: 800px) {
+    .navigointipalkki, .pudotettuheader, .sakkoinfo {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .info p{
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .pudotettuheader h1 {
+        font-size: 15px;
+    }
+
+    .pudotettuheader p {
+        font-size: 6px;
+    }
+
+    /* 
+    Tehdään napeista hieman pienemmät
+    */
+    .gen_button{
+        font-size: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .ostokohde{
+        height: auto;
+        font-size: 26px;
+        padding: 30px;
+    }
+
+    /* Otetaan navigointipalkista hover
+    "pois" kun siirretään mahd. mobiililaitteelle. Tähän nyt
+    varmaan joku nätimpikin tapa olisi media querylla.*/
+    .navigointipalkki a:hover {
+        background-color: #3D5656;
+        color: white;
+    }
+    
+    .navigointipalkki a:active{
+        background-color: #FED049;
+        color: black;
+    }
+
+    /* Otetaan napilta hover
+    "pois" kun siirretään mahd. mobiililaitteelle. Tähän nyt
+    varmaan joku nätimpikin tapa olisi media querylla.*/
+    .gen_button:hover {
+        background-color: #FED049;
+        box-shadow: 10px 10px 8px #3D5656, -10px -10px 8px #68B984;
+    }
+
+    /*Hoverin ollessa pois muutetaan väriä painallettaessa
+     nappia, jotta käyttäjä saa indikaation onnistuneesta
+    opereaatiosta.*/
+    .gen_button:active{
+        background-color: #68B984;
+        box-shadow: 10px 10px 8px #3D5656, -10px -10px 8px #FED049;
+    }
+  }
+
+  /*Tiputetaan vielä kerrottavan
+  ostokohteen fonttia lisää, kun
+  näytön leveys tippuu entistä pienemmäksi.*/
+  @media screen and (max-width: 400px) {
+    .ostokohde {
+        font-size: 16px;
+    }
+  }
+
+  @media screen and (max-height: 400px) {
+    .gen_button {
+        height: 100px;
+        width: 100px;
+    }
+  }

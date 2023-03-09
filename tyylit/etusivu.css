@@ -1,0 +1,131 @@
+/* Navigointipalkki */
+.navigointipalkki {
+    display: flex;
+    background-color: transparent;
+    color: white;
+}
+
+/* navbarin linkkien tyylit järjestyksessä visited, plain, hover
+*/
+.navigointipalkki a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.navigointipalkki a {
+    padding: 18px;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.navigointipalkki a:hover {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+
+body {
+    margin: 0px;
+}
+
+/*
+Taustakuva ja mahdollisimman vaivattomasti
+vastaamaan eri näytönkokojen tarpeeseen
+*/
+html {
+    background-image: url('../media/jamijarvi.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Tässä lyhyt teksti */
+.info {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+/*
+  Teksti hieman keskemmälle ja keskitetysti
+*/
+.info p{
+    padding: 60px;
+    background-color: transparent;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* SeAMK-logo */
+.logo {
+    text-align: center;
+}
+
+/* Responsiivisuus */
+
+/*  Linkit päällekäin ja pieni väritehoste */
+@media screen and (max-width: 800px) {
+    .navigointipalkki{
+      flex-direction: column;
+      text-align: center;
+      background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(254, 208, 73, 1));
+      border-bottom: 1px solid #3D5656;
+    }
+    
+    /* 
+      Luodaan linkeille box-shadow:lla
+      borderin kaltainen raja + poistetaan tekstin suureneminen
+    */
+    .navigointipalkki a {
+        margin-top: 5px;
+        padding: 5px;
+        text-decoration: none;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        border-bottom: 1px transparent rgba(61, 86, 86, 1);
+        box-shadow: 0px 40px 40px rgba(0, 0, 0, .1)
+    }
+    
+    /* 
+      Otetaan hover rumasti "pois"
+    */
+    .navigointipalkki a:hover {
+        background-color: transparent;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    /*
+      Indikaatio käyttäjälle
+      onnistuneesta painalluksesta
+    */
+    .navigointipalkki a:active {
+        color: #3D5656;
+    }
+
+    /*
+      Tasataan pienemmälle ruudulle teksti
+      Pienemmät puskurit
+    */
+    .info p {
+        text-align: justify;
+        margin-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+}

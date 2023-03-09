@@ -34,16 +34,19 @@ body {
 }
 
 .main {
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   padding-left: 20%;
   padding-right: 20%;
 }
 
-.main h1 {
+.info h1 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  width: 100%;
   padding: 15px;
   background-color: #68B984;
   font-size: 30px;
@@ -87,7 +90,6 @@ table {
 }
 
 .taulukko th, td {
-  height: 80px;
   padding: 15px;
   border: none;
   border-bottom: 1px solid #3D5656;
@@ -174,7 +176,7 @@ tr:hover {
   /* Pienennetään taulukon fyysistä kokoa*/
   .taulukko {
     padding: 0%;
-    font-size: 13px;
+    font-size: 14px;
     overflow-wrap: break-word;
   }
 
